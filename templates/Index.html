@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- <script src="./../static/lodash.js"></script> -->
+</head>
+<body>
+    This is a test page.
+    <script type="text/javascript">
+        var myTweets = {{ tweets|tojson }};
+
+        console.log(myTweets);
+
+        // var contentArray = _.map(myTweets, 'content');
+        // console.log(contentArray);
+
+
+        var myStates = {{ states|tojson }};
+
+        console.log(myStates);
+    </script>
+</body>
+</html>
