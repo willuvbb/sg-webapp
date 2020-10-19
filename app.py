@@ -45,8 +45,8 @@ def home():
     # cursor.close()
     # cnx.close()
 
-    # return render_template('Dashboard.html', tweets=tabledata, states=states)
-    return render_template('Index.html',tweets=tabledata,states=states)
+    return render_template('Dashboard.html', tweets=tabledata, states=states)
+    # return render_template('Index.html',tweets=tabledata,states=states)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=82)
