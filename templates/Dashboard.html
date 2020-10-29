@@ -368,86 +368,89 @@
             <hr/>
             {#            <hr/>#}
             <div class="row">
-                <div id="example-table"></div>
-                <!-- <script type="text/javascript" src="/static/tabulator.min.js"></script> -->
-                <script type="text/javascript">
-                    // the data will be fed into the html "as context" via flask app
-                    var datatable = new Tabulator("#example-table", {
-                        height: 600, // set height of table to enable virtual DOM
-                        data: myTweets,
-                        layout: "fitColumns", //fit columns to width of table (optional)
-                        columns: [ //Define Table Columns
-                            {
-                                title: "Timestamp",
-                                field: "timestamp",
-                                align: "center",
-                                formatter: "textarea",
-                                width: 125,
-                                headerFilter: true
-                            },
-                            {
-                                title: "Tweet",
-                                field: "tweet",
-                                sorter: "string",
-                                formatter: "textarea",
-                                widthGrow: 3,
-                                headerFilter: true
-                            },
-                            {
-                                title: "Content",
-                                field: "content",
-                                sorter: "string",
-                                formatter: "textarea",
-                                width: 105,
-                                headerFilter: true
-                            },
-                            {
-                                title: "Emotion",
-                                field: "emotion",
-                                sorter: "string",
-                                formatter: "textarea",
-                                width: 105,
-                                headerFilter: true
-                            },
-                            {
-                                title: "User",
-                                field: "username",
-                                sorter: "string",
-                                formatter: "textarea",
-                                align: "left",
-                                headerFilter: true
-                            },
-                            {
-                                title: "Followers",
-                                field: "followers",
-                                align: "right",
-                                width: 111,
-                                formatter: "textarea",
-                                headerFilter: true
-                            },
-                            {
-                                title: "Location",
-                                field: "location",
-                                sorter: "string",
-                                formatter: "textarea",
-                                align: "left",
-                                headerFilter: true
-                            },
-                            {
-                                title: "State",
-                                field: "state",
-                                sorter: "string",
-                                width: 85,
-                                formatter: "textarea",
-                                align: "left",
-                                headerFilter: true
-                            },
-                        ],
-                        initialSort: [
-                            {column: "timestamp", dir: "asc"}, //sort by this first
-                        ]
-                    });
-                </script>
+                <div class="col">
+                    <div id="example-table"></div>
+                    <!-- <script type="text/javascript" src="/static/tabulator.min.js"></script> -->
+                    <script type="text/javascript">
+                        // the data will be fed into the html "as context" via flask app
+                        var datatable = new Tabulator("#example-table", {
+                            height: 600, // set height of table to enable virtual DOM
+                            data: myTweets,
+                            layout: "fitColumns", //fit columns to width of table (optional)
+                            columns: [ //Define Table Columns
+                                {
+                                    title: "Timestamp",
+                                    field: "timestamp",
+                                    align: "center",
+                                    formatter: "textarea",
+                                    width: 125,
+                                    headerFilter: true
+                                },
+                                {
+                                    title: "Tweet",
+                                    field: "tweet",
+                                    sorter: "string",
+                                    formatter: "textarea",
+                                    widthGrow: 3,
+                                    // width: 500,
+                                    headerFilter: true
+                                },
+                                {
+                                    title: "Content",
+                                    field: "content",
+                                    sorter: "string",
+                                    formatter: "textarea",
+                                    width: 105,
+                                    headerFilter: true
+                                },
+                                {
+                                    title: "Emotion",
+                                    field: "emotion",
+                                    sorter: "string",
+                                    formatter: "textarea",
+                                    width: 105,
+                                    headerFilter: true
+                                },
+                                {
+                                    title: "User",
+                                    field: "username",
+                                    sorter: "string",
+                                    formatter: "textarea",
+                                    align: "left",
+                                    headerFilter: true
+                                },
+                                {
+                                    title: "Followers",
+                                    field: "followers",
+                                    align: "right",
+                                    width: 111,
+                                    formatter: "textarea",
+                                    headerFilter: true
+                                },
+                                {
+                                    title: "Location",
+                                    field: "location",
+                                    sorter: "string",
+                                    formatter: "textarea",
+                                    align: "left",
+                                    headerFilter: true
+                                },
+                                {
+                                    title: "State",
+                                    field: "state",
+                                    sorter: "string",
+                                    width: 85,
+                                    formatter: "textarea",
+                                    align: "left",
+                                    headerFilter: true
+                                },
+                            ],
+                            initialSort: [
+                                {column: "timestamp", dir: "asc"}, //sort by this first
+                            ]
+                        });
+                    </script>
+                </div>
             </div>
         </div>
     </div>

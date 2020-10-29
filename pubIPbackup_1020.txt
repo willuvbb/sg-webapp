@@ -1,0 +1,23 @@
+Hello. This is a backup of the file below:
+cat /etc/nginx/sites-available/18.216.58.166
+made by WLC on oct 20 2020, in case his tutorial about setting up uWSGI/nginx goes horribly wrong.
+
+server {
+        listen 80;
+        listen [::]:80;
+        server_name 18.216.58.166;
+
+	location / {
+        proxy_pass http://localhost:8080/;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection upgrade;
+        proxy_set_header Accept-Encoding gzip;
+        }
+
+	location /test {
+        proxy_pass http://localhost:82/;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection upgrade;
+        proxy_set_header Accept-Encoding gzip;
+        }
+    }
